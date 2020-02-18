@@ -1,0 +1,35 @@
+{
+  "name": "Google chrome extension",
+  "description": "Google chrome extension boilerplate",
+  "version": "1.0",
+  "manifest_version": 2,
+  "icons": {
+    "16": "./icons/16x16.png",
+    "32": "./icons/32x32.png",
+    "64": "./icons/64x64.png",
+    "128": "./icons/128x128.png"
+  },
+  "permissions": ["declarativeContent"],
+  "background": {
+    "scripts": ["./src/background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "./src/popup.html",
+    "default_icon": {
+      "16": "./icons/16x16.png",
+      "32": "./icons/32x32.png",
+      "64": "./icons/64x64.png",
+      "128": "./icons/128x128.png"
+    }
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Z",
+        "mac": "MacCtrl+Z"
+      },
+      "description": "Opens Popup.html"
+    }
+  }
+}
